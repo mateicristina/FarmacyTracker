@@ -1,24 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NG-NC-6PQ">
+                                <rect key="frame" x="132" y="542" width="150" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                            </button>
+                            <view contentMode="scaleToFill" id="4Nw-py-tb8" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="sSn-XG-BBx"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="7ca-ez-CGI">
+            <objects>
+                <viewController storyboardIdentifier="second" modalPresentationStyle="fullScreen" id="n7Y-wK-wVu" customClass="SearchViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iyr-0e-wPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2m-f0-BEf">
+                                <rect key="frame" x="64" y="344" width="286" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ng1-BG-tqs">
+                                <rect key="frame" x="0.0" y="371" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bnJ-IL-0jf">
+                                <rect key="frame" x="0.0" y="427" width="414" height="449"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchMedCell" id="Azo-d1-JvK" customClass="SearchMedTableViewCell" customModule="FarmacyTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Azo-d1-JvK" id="GkO-1A-L9J">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8B-Eg-1Fg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Search Medicaments" id="4TZ-gD-uMn"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bnJ-IL-0jf" firstAttribute="top" secondItem="ng1-BG-tqs" secondAttribute="bottom" id="0Sf-Bt-S9M"/>
+                            <constraint firstAttribute="bottom" secondItem="bnJ-IL-0jf" secondAttribute="bottom" constant="20" symbolic="YES" id="1fK-dC-og9"/>
+                            <constraint firstItem="Q8B-Eg-1Fg" firstAttribute="top" secondItem="T7t-wF-vfl" secondAttribute="top" id="32k-Mv-Y70"/>
+                            <constraint firstItem="T7t-wF-vfl" firstAttribute="bottom" secondItem="ng1-BG-tqs" secondAttribute="bottom" constant="386" id="4X9-EP-NzB"/>
+                            <constraint firstItem="Q8B-Eg-1Fg" firstAttribute="trailing" secondItem="T7t-wF-vfl" secondAttribute="trailing" id="5sm-AJ-AIf"/>
+                            <constraint firstItem="bnJ-IL-0jf" firstAttribute="leading" secondItem="T7t-wF-vfl" secondAttribute="leading" id="65U-Df-xzW"/>
+                            <constraint firstItem="bnJ-IL-0jf" firstAttribute="trailing" secondItem="T7t-wF-vfl" secondAttribute="trailing" id="CdH-nr-VCO"/>
+                            <constraint firstItem="y2m-f0-BEf" firstAttribute="leading" secondItem="T7t-wF-vfl" secondAttribute="leading" constant="64" id="I1r-tV-AVY"/>
+                            <constraint firstItem="Q8B-Eg-1Fg" firstAttribute="leading" secondItem="T7t-wF-vfl" secondAttribute="leading" id="Pgs-Md-l4e"/>
+                            <constraint firstItem="T7t-wF-vfl" firstAttribute="trailing" secondItem="y2m-f0-BEf" secondAttribute="trailing" constant="64" id="aju-hR-N92"/>
+                            <constraint firstItem="ng1-BG-tqs" firstAttribute="trailing" secondItem="T7t-wF-vfl" secondAttribute="trailing" id="cFg-nH-Al3"/>
+                            <constraint firstItem="ng1-BG-tqs" firstAttribute="leading" secondItem="T7t-wF-vfl" secondAttribute="leading" id="cQf-cN-7Ta"/>
+                            <constraint firstItem="y2m-f0-BEf" firstAttribute="top" secondItem="T7t-wF-vfl" secondAttribute="top" constant="300" id="eQw-tn-Umx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T7t-wF-vfl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="b2O-2R-Am8"/>
+                    <navigationItem key="navigationItem" id="tCk-9W-gYf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ng1-BG-tqs" id="7iW-aY-mDl"/>
+                        <outlet property="tblSearch" destination="bnJ-IL-0jf" id="dKD-to-FS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjp-03-yKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2667" y="-177"/>
+        </scene>
+        <!--FarmaciesFoundView Controller-->
+        <scene sceneID="NIu-15-rQJ">
+            <objects>
+                <viewController storyboardIdentifier="findMedAtFarmacy" title="FarmaciesFoundView Controller" modalPresentationStyle="fullScreen" id="uPI-jL-De5" customClass="FarmaciesFoundViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dq7-5Z-e9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-iY-PSq">
+                                <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
+                                <items>
+                                    <navigationItem title="Farmacies Found" id="zCr-Kh-0on"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vzi-iY-PSq" firstAttribute="top" secondItem="sMH-8t-D1g" secondAttribute="top" id="5yu-aT-e1q"/>
+                            <constraint firstItem="vzi-iY-PSq" firstAttribute="leading" secondItem="sMH-8t-D1g" secondAttribute="leading" id="gI3-Ly-ktu"/>
+                            <constraint firstItem="vzi-iY-PSq" firstAttribute="trailing" secondItem="sMH-8t-D1g" secondAttribute="trailing" id="kNT-vD-bil"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sMH-8t-D1g"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NMb-In-8Nx" appends="YES" id="5Qd-yv-AcL"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1K5-wJ-Ryy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="NMb-In-8Nx">
+                    <connections>
+                        <segue destination="jkU-GJ-Hdl" kind="show" id="qpW-oH-z20"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3958" y="-177"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="zq4-vm-9lt">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="luw-EK-klm" customClass="ProfileViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xu-vC-OzI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="K5b-ll-44w"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="o7r-Ku-G1X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDV-nh-eNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2667" y="591"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="T3D-t2-YZb">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" modalPresentationStyle="fullScreen" id="jkU-GJ-Hdl" customClass="TabBarViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rfa-fG-9wO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QDf-z4-eeU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="luw-EK-klm" kind="relationship" relationship="viewControllers" id="kdd-Th-xdv"/>
+                        <segue destination="n7Y-wK-wVu" kind="relationship" relationship="viewControllers" id="UdA-UT-O5a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTn-e6-ukj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="90"/>
+        </scene>
+        <!--Prescriptions Collection View Controller-->
+        <scene sceneID="4RV-Dv-MTo">
+            <objects>
+                <collectionViewController id="IER-dw-b8j" customClass="PrescriptionsCollectionViewController" customModule="FarmacyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QI3-h8-bPp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HjC-OR-Win">
+                            <size key="itemSize" width="145" height="112"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KBT-QT-ceW">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZKe-fX-Oh1">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="112"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DGL-5n-Fp7">
+                                            <rect key="frame" x="20" y="20" width="105" height="72"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="DGL-5n-Fp7" secondAttribute="trailing" constant="20" symbolic="YES" id="5qF-7d-Mrm"/>
+                                        <constraint firstItem="DGL-5n-Fp7" firstAttribute="top" secondItem="ZKe-fX-Oh1" secondAttribute="top" constant="20" symbolic="YES" id="LXq-4f-scQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="DGL-5n-Fp7" secondAttribute="bottom" constant="20" symbolic="YES" id="W1F-xe-2iP"/>
+                                        <constraint firstItem="DGL-5n-Fp7" firstAttribute="centerY" secondItem="ZKe-fX-Oh1" secondAttribute="centerY" id="WeT-bB-4XR"/>
+                                        <constraint firstItem="DGL-5n-Fp7" firstAttribute="leading" secondItem="ZKe-fX-Oh1" secondAttribute="leading" constant="20" symbolic="YES" id="ciG-uI-9hd"/>
+                                        <constraint firstItem="DGL-5n-Fp7" firstAttribute="centerX" secondItem="ZKe-fX-Oh1" secondAttribute="centerX" id="zJn-Wz-mXz"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="145" height="112"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="IER-dw-b8j" id="VcZ-XX-G2A"/>
+                            <outlet property="delegate" destination="IER-dw-b8j" id="Twi-nd-LVI"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICt-qU-HSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3958" y="591"/>
         </scene>
     </scenes>
 </document>

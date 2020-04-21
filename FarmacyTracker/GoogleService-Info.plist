@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1094860984311-f973vebi2oa9l00e6uhidc45tasqvrt7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1094860984311-f973vebi2oa9l00e6uhidc45tasqvrt7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB5haOeWu04U3-ALYM9sXEUvpYi104_-CQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1094860984311</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cristinamatei.FarmacyTracker</string>
+	<key>PROJECT_ID</key>
+	<string>farmacytracker</string>
+	<key>STORAGE_BUCKET</key>
+	<string>farmacytracker.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1094860984311:ios:fb3554e7075cde6b2b68f2</string>
+	<key>DATABASE_URL</key>
+	<string>https://farmacytracker.firebaseio.com</string>
+</dict>
+</plist>

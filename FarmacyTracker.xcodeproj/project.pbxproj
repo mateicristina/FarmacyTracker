@@ -3,19 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4732115D153CBD3A15C06596 /* Pods_FarmacyTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FD550F691ED6FD5826DF29 /* Pods_FarmacyTracker.framework */; };
+		A970F6BE244B83EE005458F7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6BD244B83EE005458F7 /* SearchViewController.swift */; };
+		A970F6C0244CAEEF005458F7 /* FarmaciesFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6BF244CAEEF005458F7 /* FarmaciesFoundViewController.swift */; };
+		A970F6C2244CB481005458F7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6C1244CB481005458F7 /* ProfileViewController.swift */; };
+		A970F6C4244DDCA5005458F7 /* SearchMedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6C3244DDCA5005458F7 /* SearchMedTableViewCell.swift */; };
+		A970F6C6244DE128005458F7 /* PrescriptionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6C5244DE128005458F7 /* PrescriptionsCollectionViewController.swift */; };
+		A970F6CC244EF44A005458F7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6CB244EF44A005458F7 /* TabBarViewController.swift */; };
 		A9935037244B65FE00D8BCA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9935036244B65FE00D8BCA9 /* AppDelegate.swift */; };
 		A9935039244B65FE00D8BCA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9935038244B65FE00D8BCA9 /* SceneDelegate.swift */; };
 		A993503B244B65FE00D8BCA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993503A244B65FE00D8BCA9 /* ViewController.swift */; };
 		A993503E244B65FE00D8BCA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A993503C244B65FE00D8BCA9 /* Main.storyboard */; };
 		A9935040244B65FF00D8BCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A993503F244B65FF00D8BCA9 /* Assets.xcassets */; };
 		A9935043244B65FF00D8BCA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9935041244B65FF00D8BCA9 /* LaunchScreen.storyboard */; };
+		A993504B244B69F000D8BCA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A993504A244B69F000D8BCA9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28A531816FCA1C2AC0F75FE7 /* Pods-FarmacyTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmacyTracker.debug.xcconfig"; path = "Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		76FD550F691ED6FD5826DF29 /* Pods_FarmacyTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmacyTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A970F6BD244B83EE005458F7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A970F6BF244CAEEF005458F7 /* FarmaciesFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmaciesFoundViewController.swift; sourceTree = "<group>"; };
+		A970F6C1244CB481005458F7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A970F6C3244DDCA5005458F7 /* SearchMedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMedTableViewCell.swift; sourceTree = "<group>"; };
+		A970F6C5244DE128005458F7 /* PrescriptionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionsCollectionViewController.swift; sourceTree = "<group>"; };
+		A970F6CB244EF44A005458F7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A9935033244B65FE00D8BCA9 /* FarmacyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmacyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9935036244B65FE00D8BCA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9935038244B65FE00D8BCA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,8 @@
 		A993503F244B65FF00D8BCA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9935042244B65FF00D8BCA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9935044244B65FF00D8BCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A993504A244B69F000D8BCA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDDB26A78E44FA80312752F0 /* Pods-FarmacyTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmacyTracker.release.xcconfig"; path = "Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4732115D153CBD3A15C06596 /* Pods_FarmacyTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD9B6F9A10511DAEEA5BF4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28A531816FCA1C2AC0F75FE7 /* Pods-FarmacyTracker.debug.xcconfig */,
+				FDDB26A78E44FA80312752F0 /* Pods-FarmacyTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5BBBBB2D5CC65BF89AB58681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76FD550F691ED6FD5826DF29 /* Pods_FarmacyTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A993502A244B65FE00D8BCA9 = {
 			isa = PBXGroup;
 			children = (
 				A9935035244B65FE00D8BCA9 /* FarmacyTracker */,
 				A9935034244B65FE00D8BCA9 /* Products */,
+				3DD9B6F9A10511DAEEA5BF4D /* Pods */,
+				5BBBBB2D5CC65BF89AB58681 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +94,17 @@
 		A9935035244B65FE00D8BCA9 /* FarmacyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A993504A244B69F000D8BCA9 /* GoogleService-Info.plist */,
 				A9935036244B65FE00D8BCA9 /* AppDelegate.swift */,
 				A9935038244B65FE00D8BCA9 /* SceneDelegate.swift */,
+				A970F6CB244EF44A005458F7 /* TabBarViewController.swift */,
 				A993503A244B65FE00D8BCA9 /* ViewController.swift */,
 				A993503C244B65FE00D8BCA9 /* Main.storyboard */,
+				A970F6C5244DE128005458F7 /* PrescriptionsCollectionViewController.swift */,
+				A970F6C3244DDCA5005458F7 /* SearchMedTableViewCell.swift */,
+				A970F6C1244CB481005458F7 /* ProfileViewController.swift */,
+				A970F6BF244CAEEF005458F7 /* FarmaciesFoundViewController.swift */,
+				A970F6BD244B83EE005458F7 /* SearchViewController.swift */,
 				A993503F244B65FF00D8BCA9 /* Assets.xcassets */,
 				A9935041244B65FF00D8BCA9 /* LaunchScreen.storyboard */,
 				A9935044244B65FF00D8BCA9 /* Info.plist */,
@@ -74,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9935047244B65FF00D8BCA9 /* Build configuration list for PBXNativeTarget "FarmacyTracker" */;
 			buildPhases = (
+				4405B141E223CC1DA40F7F6D /* [CP] Check Pods Manifest.lock */,
 				A993502F244B65FE00D8BCA9 /* Sources */,
 				A9935030244B65FE00D8BCA9 /* Frameworks */,
 				A9935031244B65FE00D8BCA9 /* Resources */,
+				DAA9A607D3AE56FD8F8A0D43 /* [CP] Embed Pods Frameworks */,
+				6A825F24E6FDDC36931A0465 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -93,6 +141,9 @@
 		A993502B244B65FE00D8BCA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Cell,
+				);
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Cristina-Gabriela Matei";
@@ -126,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9935043244B65FF00D8BCA9 /* LaunchScreen.storyboard in Resources */,
+				A993504B244B69F000D8BCA9 /* GoogleService-Info.plist in Resources */,
 				A9935040244B65FF00D8BCA9 /* Assets.xcassets in Resources */,
 				A993503E244B65FE00D8BCA9 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +185,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4405B141E223CC1DA40F7F6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FarmacyTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A825F24E6FDDC36931A0465 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA9A607D3AE56FD8F8A0D43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmacyTracker/Pods-FarmacyTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A993502F244B65FE00D8BCA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A970F6C2244CB481005458F7 /* ProfileViewController.swift in Sources */,
 				A993503B244B65FE00D8BCA9 /* ViewController.swift in Sources */,
 				A9935037244B65FE00D8BCA9 /* AppDelegate.swift in Sources */,
+				A970F6BE244B83EE005458F7 /* SearchViewController.swift in Sources */,
+				A970F6CC244EF44A005458F7 /* TabBarViewController.swift in Sources */,
 				A9935039244B65FE00D8BCA9 /* SceneDelegate.swift in Sources */,
+				A970F6C4244DDCA5005458F7 /* SearchMedTableViewCell.swift in Sources */,
+				A970F6C6244DE128005458F7 /* PrescriptionsCollectionViewController.swift in Sources */,
+				A970F6C0244CAEEF005458F7 /* FarmaciesFoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +399,7 @@
 		};
 		A9935048244B65FF00D8BCA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A531816FCA1C2AC0F75FE7 /* Pods-FarmacyTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +418,7 @@
 		};
 		A9935049244B65FF00D8BCA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDDB26A78E44FA80312752F0 /* Pods-FarmacyTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

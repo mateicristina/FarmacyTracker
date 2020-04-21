@@ -1,0 +1,6 @@
+framework module Pods_FarmacyTracker {
+  umbrella header "Pods-FarmacyTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
