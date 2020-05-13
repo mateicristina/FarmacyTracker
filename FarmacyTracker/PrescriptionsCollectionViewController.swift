@@ -8,11 +8,15 @@
 
 import UIKit
 import Photos
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
 class PrescriptionsCollectionViewController: UICollectionViewController {
 
+    @IBOutlet var imageCollection: UICollectionView!
+    var ref = Database.database().reference()
+    var imageUrl: [URL] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,38 +27,47 @@ class PrescriptionsCollectionViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        let user = Auth.auth().currentUser
+        if let user = user {
+            ref.child("userPrescriptions/\(user.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
+                let databaseValues = snapshot.value as? NSDictionary
+                print("value")
+                print(databaseValues)
+                for (userId, urls) in databaseValues! {
+                    print(urls)
+                    self.imageUrl.append(urls as! URL)
+                }
+            })
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return imageUrl.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "prescriptionImage", for: indexPath)
+//        configureCell(cell: cell, forRowAtIndexPath: indexPath)
         // Configure the cell
-    
+        let imageView: UIImageView = UIImageView(frame: CGRect(x: 50,y: 50, width: self.view.frame.width-200, height: 50))
+        imageView.load(url: imageUrl[indexPath.row])
+        cell.contentView.addSubview(imageView)
         return cell
     }
+    
+//    func configureCell(cell: UICollectionViewCell, forRowAtIndexPath: IndexPath) {
+//        cell.backgroundView?.largeContentImage.load(url: imageUrl[forRowAtIndexPath.row])
+//        print("in for row at index path")
+//    }
 
     // MARK: UICollectionViewDelegate
 

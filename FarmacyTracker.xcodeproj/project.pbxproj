@@ -16,6 +16,11 @@
 		A970F6CC244EF44A005458F7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6CB244EF44A005458F7 /* TabBarViewController.swift */; };
 		A970F6CE245D8C80005458F7 /* FarmaciesFoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6CD245D8C80005458F7 /* FarmaciesFoundTableViewCell.swift */; };
 		A970F6D0246A98E2005458F7 /* FarmacyOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6CF246A98E2005458F7 /* FarmacyOnMapViewController.swift */; };
+		A970F6D4246B41FA005458F7 /* RemainderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6D3246B41FA005458F7 /* RemainderTableViewCell.swift */; };
+		A970F6D8246B4313005458F7 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6D7246B4313005458F7 /* LocalNotification.swift */; };
+		A970F6DA246BCB18005458F7 /* AddRemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6D9246BCB18005458F7 /* AddRemainderViewController.swift */; };
+		A970F6DC246BE600005458F7 /* MainPrescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6DB246BE600005458F7 /* MainPrescriptionsViewController.swift */; };
+		A970F6DE246C2338005458F7 /* PrescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A970F6DD246C2338005458F7 /* PrescriptionCollectionViewCell.swift */; };
 		A9935037244B65FE00D8BCA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9935036244B65FE00D8BCA9 /* AppDelegate.swift */; };
 		A9935039244B65FE00D8BCA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9935038244B65FE00D8BCA9 /* SceneDelegate.swift */; };
 		A993503B244B65FE00D8BCA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993503A244B65FE00D8BCA9 /* ViewController.swift */; };
@@ -36,6 +41,11 @@
 		A970F6CB244EF44A005458F7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A970F6CD245D8C80005458F7 /* FarmaciesFoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmaciesFoundTableViewCell.swift; sourceTree = "<group>"; };
 		A970F6CF246A98E2005458F7 /* FarmacyOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmacyOnMapViewController.swift; sourceTree = "<group>"; };
+		A970F6D3246B41FA005458F7 /* RemainderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderTableViewCell.swift; sourceTree = "<group>"; };
+		A970F6D7246B4313005458F7 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		A970F6D9246BCB18005458F7 /* AddRemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemainderViewController.swift; sourceTree = "<group>"; };
+		A970F6DB246BE600005458F7 /* MainPrescriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPrescriptionsViewController.swift; sourceTree = "<group>"; };
+		A970F6DD246C2338005458F7 /* PrescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9935033244B65FE00D8BCA9 /* FarmacyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmacyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9935036244B65FE00D8BCA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9935038244B65FE00D8BCA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,11 +114,16 @@
 				A970F6CB244EF44A005458F7 /* TabBarViewController.swift */,
 				A993503A244B65FE00D8BCA9 /* ViewController.swift */,
 				A993503C244B65FE00D8BCA9 /* Main.storyboard */,
+				A970F6DB246BE600005458F7 /* MainPrescriptionsViewController.swift */,
+				A970F6D9246BCB18005458F7 /* AddRemainderViewController.swift */,
+				A970F6D3246B41FA005458F7 /* RemainderTableViewCell.swift */,
 				A970F6CF246A98E2005458F7 /* FarmacyOnMapViewController.swift */,
 				A970F6C5244DE128005458F7 /* PrescriptionsCollectionViewController.swift */,
+				A970F6DD246C2338005458F7 /* PrescriptionCollectionViewCell.swift */,
 				A970F6C3244DDCA5005458F7 /* SearchMedTableViewCell.swift */,
 				A970F6CD245D8C80005458F7 /* FarmaciesFoundTableViewCell.swift */,
 				A970F6C1244CB481005458F7 /* ProfileViewController.swift */,
+				A970F6D7246B4313005458F7 /* LocalNotification.swift */,
 				A970F6BF244CAEEF005458F7 /* FarmaciesFoundViewController.swift */,
 				A970F6BD244B83EE005458F7 /* SearchViewController.swift */,
 				A993503F244B65FF00D8BCA9 /* Assets.xcassets */,
@@ -256,11 +271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A970F6C2244CB481005458F7 /* ProfileViewController.swift in Sources */,
+				A970F6DC246BE600005458F7 /* MainPrescriptionsViewController.swift in Sources */,
+				A970F6D8246B4313005458F7 /* LocalNotification.swift in Sources */,
+				A970F6D4246B41FA005458F7 /* RemainderTableViewCell.swift in Sources */,
 				A993503B244B65FE00D8BCA9 /* ViewController.swift in Sources */,
 				A970F6CE245D8C80005458F7 /* FarmaciesFoundTableViewCell.swift in Sources */,
 				A9935037244B65FE00D8BCA9 /* AppDelegate.swift in Sources */,
 				A970F6BE244B83EE005458F7 /* SearchViewController.swift in Sources */,
+				A970F6DE246C2338005458F7 /* PrescriptionCollectionViewCell.swift in Sources */,
 				A970F6D0246A98E2005458F7 /* FarmacyOnMapViewController.swift in Sources */,
+				A970F6DA246BCB18005458F7 /* AddRemainderViewController.swift in Sources */,
 				A970F6CC244EF44A005458F7 /* TabBarViewController.swift in Sources */,
 				A9935039244B65FE00D8BCA9 /* SceneDelegate.swift in Sources */,
 				A970F6C4244DDCA5005458F7 /* SearchMedTableViewCell.swift in Sources */,

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/cristinamatei/Desktop/FarmacyTracker/FarmacyTracker/RemaindersUITableView.swift">
+   </FileRef>
+   <FileRef
       location = "group:FarmacyTracker.xcodeproj">
    </FileRef>
    <FileRef
